@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>요일별 웹툰 목록</title>
+    <style>
+        .webtoon_list { display: none; }
+    </style>
+    <script>
+        function get_today() {
+            var today = new Date();
+            var day = today.getDay();
+            var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            return days[day];
+        }
+
+        function show_webtoons(day) {
+            var lists = document.querySelectorAll('.webtoon_list');
+            for (var i = 0; i < lists.length; i++) {
+                if (lists[i].id === day) {
+                    lists[i].style.display = 'block';
+                } else {
+                    lists[i].style.display = 'none';
+                }
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = get_today();
+            show_webtoons(today);
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="show_webtoons('monday')">월요일</button>
+        <button onclick="show_webtoons('tuesday')">화요일</button>
+        <button onclick="show_webtoons('wednesday')">수요일</button>
+        <button onclick="show_webtoons('thursday')">목요일</button>
+        <button onclick="show_webtoons('friday')">금요일</button>
+        <button onclick="show_webtoons('saturday')">토요일</button>
+        <button onclick="show_webtoons('sunday')">일요일</button>
+    </div><div id="monday" class="webtoon_list"><h1>monday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=793067">버그이터</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=783052">퀘스트지상주의</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=821195">회귀한 공작가의 막내도련님</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=832703">시한부 천재가 살아남는 법</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=822657">환생 천마</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=758037">참교육</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=795297">신화급 귀속 아이템을 손에 넣었다</a></li></ul></div><div id="tuesday" class="webtoon_list"><h1>tuesday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=800726">사표내고 이계에서 힐링합니다</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=821597">괴력난신</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=829743">아포칼립스에 물류센터를 숨김</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=812017">배드 엔딩 메이커</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=812594">사원 김철수</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=730656">
+사신소년</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=784248">
+내가 키운 S급들</a></li></ul></div><div id="wednesday" class="webtoon_list"><h1>wednesday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=769209">화산귀환</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=747269">전지적 독자 시점</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=775141">66666년 만에 환생한 흑마법사</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=717481">일렉시드</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=806888">왕따가 격투기를 너무 잘함</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=797443">
+운명을 보는 회사원</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=730425">판타지 여동생!</a></li></ul></div><div id="thursday" class="webtoon_list"><h1>thursday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=800770">재벌집 막내아들</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=802272">독거미</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=814753">웨폰 크리에이터</a></li><li><a href="https://comic.naver.com/webtoon/detail?titleId=831606">엄청 소환된</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=747271">나노마신</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=801698">게임 최강 트롤러</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=796827	">
+회귀한 천재 헌터의 슬기로운 청소생활</a></li></ul></div><div id="friday" class="webtoon_list"><h1>friday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=773797">나 혼자 만렙 뉴비</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=751168">상남자</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=817032">열렙전사 3부</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=765804">A.I. 닥터</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=746534">낙향문사전</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=753478">
+데드퀸</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=777767">역대급 영지 설계사</a></li></ul></div><div id="saturday" class="webtoon_list"><h1>saturday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=798182">디펜스 게임의 폭군이 되었다</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=820371&tab=sat">비질란테</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=811707">플레이어가 과거를 숨김</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=809722">
+부패의 사제</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=808757">야매 힐러로 사는 법</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=807393">귀환했는데 입대 전날이다</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=814509&tab=sat">회귀자의 은퇴 라이프</a></li></ul></div><div id="sunday" class="webtoon_list"><h1>sunday 웹툰 목록</h1><ul><li><a href="https://comic.naver.com/webtoon/list?titleId=799805">분신으로 자동사냥</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=655746&tab=sun">마법스크롤 상인 지오</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=779632">일타강사 백사부</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=758150">입학용병</a></li><li><a href="https://comic.naver.com/webtoon/list?titleId=819426">다크 판타지 속 성기사</a></li></ul></div></body></html>
